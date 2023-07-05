@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="grid">
+        <img src="cow.jpg" alt="cow"   id="cow">
+        <img src="cat.jpg" alt="cat"   id="cat">
+        <img src="dog.jpg" alt="dog"   id="dog">
+       
+    </div>
+
+<script>
+const imgCow = document.getElementById('cow');
+const imgCat = document.getElementById('cat');
+const imgDog = document.getElementById('dog');
+
+let soundCow = new Audio()
+soundCow.src = "cow.wav"
+
+let soundCat = new Audio()
+soundCat.src = "cat.wav"
+
+let soundDog = new Audio()
+soundDog.src = "dog.wav"
+
+imgCat.addEventListener("click", ()=>{
+    console.log("cat is clicked")
+    soundCat.play()
+})
+
+
+imgCow.addEventListener("click", ()=>{
+    console.log("cow is clicked")
+    soundCow.play()
+})
+
+imgDog.addEventListener("click", ()=>{
+    console.log("dog is clicked")
+    soundDog.play()
+})
+</script>
+
+</body>
+</html>
